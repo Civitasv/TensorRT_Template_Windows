@@ -133,10 +133,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="README.md" />
+    <ClCompile Include="example1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="example1.cpp" />
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
