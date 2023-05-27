@@ -7,13 +7,13 @@ This repo provides a minimal example for TensorRT on Windows Platform.
 ## Version
 
 - TensorRT: 8.6.1.6
-- Cuda: 11.7
+- CUDA: 11.7
 - CUDNN: 8.9.1.23
 
 ## Installation
 
 - TensorRT: <https://developer.nvidia.com/nvidia-tensorrt-8x-download>
-- Cuda: <https://developer.nvidia.com/cuda-11-7-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local>
+- CUDA: <https://developer.nvidia.com -11-7-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local>
 - CUDNN: <https://developer.nvidia.com/rdp/cudnn-download>
 
 ## Configuration
