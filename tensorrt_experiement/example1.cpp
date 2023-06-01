@@ -73,8 +73,7 @@ nvinfer1::ICudaEngine *createCudaEngine(const std::string &onnxFileName,
   // Modern version with config
   unique_ptr<IBuilderConfig, Destroy<IBuilderConfig>> config(
       builder->createBuilderConfig());
-  // This is needed for TensorRT 6, not needed by 7 !
-  config->setMaxWorkspaceSize(64 * 1024 * 1024);
+
   return builder->buildEngineWithConfig(*network, *config);
 }
 
@@ -115,7 +114,7 @@ int main() {
              "C++ TensorRT (almost) minimal example1 !!! ");
   logger.log(ILogger::Severity::kINFO, "Creating engine ...");
   unique_ptr<ICudaEngine, Destroy<ICudaEngine>> engine(
-      createCudaEngine("model1.onnx", logger));
+      createCudaEngine("./model/model1.onnx", logger));
 
   if (!engine) throw runtime_error("Engine creation failed !");
 
@@ -143,7 +142,7 @@ int main() {
   cudaStream_t stream;
   cudaStreamCreate(&stream);
   vector<float> inputTensor{0.5, -0.5, 1.0};
-  vector<float> outputTensor(2, -4.9);
+  vector<float> outputTensor{2, -4.9};
   void *bindings[2]{0};
   int batchSize = 1;
   // Alloc cuda memory for IO tensors

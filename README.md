@@ -32,7 +32,7 @@ This repo provides a minimal example for TensorRT on Windows Platform.
   - cudart_static.lib;
   - cudnn.lib;
 
-### Paths
+### Path
 
 - CUDA_PATH: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7
 - TensorRT Lib: D:\TensorRT-8.6.1.6\lib
